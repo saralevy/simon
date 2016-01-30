@@ -1,0 +1,107 @@
+body {
+    width: 100%;
+    position: fixed;
+    margin: 1% 3%;
+}
+#simon {
+    margin-top: 5%;
+    width: 45%;
+    float: left;
+}
+#moves {
+    margin-top: 5%;
+    width: 45%;
+    float: right;
+}
+#startSimon {
+    color: white;
+    background-color: red;
+    font-weight: bolder;
+    display: block;
+    padding: 1%;
+    width: 20%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+#demo {
+    display: block;
+}
+.simonGame {
+    width: 450px;
+    height: 450px;
+    display: inline-block;
+    background-color: black;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    border-radius: 15%;
+}
+.box {
+    width: 207px; 
+    height: 207px; 
+    opacity: 0.5;
+    display: inline-block;
+    -webkit-border-radius: 33%;
+    -moz-border-radius: 33%;
+    border-radius: 33%;
+    margin: 1%;
+    padding: 1%;
+    float: left; 
+}
+.green { 
+    background-color: green; 
+    transition: all 1s;
+}
+.green:active {
+    opacity: 1.0;
+}
+.red { 
+    background-color: red; 
+    transition: all 1s;
+}
+.red:active {
+    opacity: 1.0;
+}
+.blue { 
+    background-color: blue; 
+    transition: all 1s;
+}
+.blue:active {
+    opacity: 1.0;
+}
+.yellow { 
+    background-color: yellow; 
+    transition: all 1s;
+}
+.yellow:active {
+    opacity: 1.0;
+}
+.active { 
+    opacity: 1.0; 
+}
+#winORlose {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    color: red;
+    padding: 1% 0;
+}
+#simonsMoves {
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    color: red;
+    padding-left: 4%;
+}
+#yourMoves {
+    display: block;
+    text-align: left;
+    font-size: 1.5em;
+    color: red;
+    padding-left: 4%;
+    margin-bottom: 2%;
+}
+#userColors {
+       font-size: 1.0em;
+       color:blue; 
+}

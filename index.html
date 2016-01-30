@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simon</title>
+<link rel="stylesheet" href="simon.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="MainCtrl as ctrl">
+    <div id="winORlose" ng-bind="ctrl.result"></div>
+    <button id="startSimon" 
+            ng-disabled="ctrl.activeGame" 
+            ng-click="ctrl.createSimonEntry()">START</button>
+  
+    <div id="simon"> 
+        <div class="simonGame">
+            <div ng-class="{active: box.active}"
+                 class="box {{box.color}}"
+                 ng-repeat="box in ctrl.boxes"
+                 ng-disabled="ctrl.simonsTurn"
+                 ng-click="ctrl.keyPressed($index)">
+            </div>
+        </div>
+    </div>  
+
+    <!-- <span ng-if="ctrl.fiveSecondsPassed" ng-init="ctrl.endGame()"></span> -->
+
+    <div id="moves"> 
+        <div id="simonsMoves" ng-show="ctrl.simonsTurn">Simon's Turn</div>
+        <div id="yourMoves" ng-show="!ctrl.simonsTurn">Your Moves
+            <div id="userColors" ng-repeat="colors in ctrl.userGameArray track by $index">
+                <span ng-bind="ctrl.boxes[colors].color"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
